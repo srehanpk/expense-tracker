@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
-import {balanceContext} from './Context';
+import {balanceContext} from './Context'
+
 
 
 
@@ -13,6 +14,7 @@ function Balance  () {
 
     return (
             
+        
        
             <div className="balance">
 
@@ -22,6 +24,8 @@ function Balance  () {
                
 
             </div>
+
+        
             
     )
 }

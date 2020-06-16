@@ -17,6 +17,7 @@ function Income  () {
                     <h2>Total Income  </h2> 
                 
                     <span>${income}</span>
+                   
                     
 
                 </div>
