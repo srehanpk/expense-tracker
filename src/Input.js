@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 
 
 function Input  () {
 
-    
+     const [incText, setIncText] = useState("");
+     const [incAmount, setIncAmount] = useState("");
+
+     const [expText, setExpText] = useState("");
+     const [expAmount, setExpAmount] = useState("");
    
     return (
 
@@ -17,10 +21,10 @@ function Input  () {
                     
                         <br/> 
                     <form >
-                    <b>Description</b><input type = "text" placeholder="input text" ></input>
+                    <b>Description</b><input type = "text" value={incText} onChange={(e)=>setIncText(e.target.value)}  placeholder="input text" ></input>
   
                     <br/>
-                    <b>Amount</b><input type = "text" placeholder="Input Amount" ></input>
+                    <b>Amount</b><input type = "text" value={incAmount} onChange={(e)=>setIncAmount(e.target.value)} placeholder="Input Amount" ></input>
                     <br/><br/>
                     <button>Add Income</button>
                     </form>
@@ -34,10 +38,10 @@ function Input  () {
 
                     <br/>
                     <form>
-                    <b>Description</b><input type = "text" placeholder="input text" ></input>
+                    <b>Description</b><input type = "text" value={expText} onChange={(e)=>setExpText(e.target.value)} placeholder="input text" ></input>
 
                     <br/> 
-                    <b>Amount</b><input type = "text" placeholder="Input Amount" ></input>
+                    <b>Amount</b><input type = "text" value={expAmount} onChange={(e)=>setExpAmount(e.target.value)} placeholder="Input Amount" ></input>
                     <br/><br/>
                     <button>Add Expense</button>
                     </form>
