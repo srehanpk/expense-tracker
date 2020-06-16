@@ -4,7 +4,7 @@ import Balance from './Balance';
 import Income from './Income';
 import Input from './Input';
 import Footer from './Footer.js';
-import Context from './Context';
+
 
 
 
@@ -14,7 +14,7 @@ function App() {
   
   return (
 
-    <Context.Provider >
+    
     <div className="App">
       <h1>Expense Tracker </h1>
 
@@ -25,7 +25,7 @@ function App() {
       <Footer />
     
     </div>
-    </Context.Provider>
+   
   );
 }
 
