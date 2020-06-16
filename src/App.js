@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Balance from './Balance';
+import Income from './Income';
+import Input from './Input';
+import Footer from './Footer.js';
+
+
 
 function App() {
+
+  
+
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Expense Tracker </h1>
+
+    <>
+      <Balance />
+      <Income />
+      <Input />
+      <Footer />
+     </>
     </div>
   );
 }

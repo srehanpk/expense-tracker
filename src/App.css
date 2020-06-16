@@ -1,38 +1,184 @@
+body {
+background-color: whitesmoke;
+}
+
+
 .App {
   text-align: center;
+  
+  
+}
+.App h1 {
+font-size: 40px;
+color: rgb(56, 56, 56);
+border-radius: 10px;
+box-shadow: gray 2px 2px 3px 3px;
+background-color: white;
+width: fit-content;
+padding: 10px;
+margin-left: auto;
+margin-right: auto;
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.balance {
+
+
+ background-color: white;
+ box-shadow: gray 2px 2px 3px 3px;
+ border-radius: 20px;
+ width: 200px;
+ height: 50px;
+ padding: 10px;
+ margin: auto;
+   
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.balance h2 {
+ 
+  color: rgb(56, 56, 56);
+  font-size: 20px;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.balance span {
+
+  color: rgb(92, 92, 92);
+  font-size: 30px;
+  font-weight: bolder;
+  border: solid white;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: yellowgreen;
+  box-shadow: gray 2px 2px 3px 3px;
+
+ 
+}
+
+.add {
+  
+  color: rgb(56, 56, 56);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 60px;
+
+  
 }
 
-.App-link {
-  color: #61dafb;
+.income {
+          
+
+box-shadow: gray 2px 2px 3px 3px;
+border-radius: 10px;
+background-color: rgb(195, 200, 241);
+padding: 5px;
+width: 300px;
+margin: auto;
+
+
+}
+.expense {
+          
+
+  box-shadow: gray 2px 2px 3px 3px;
+  border-radius: 10px;
+  background-color: rgb(236, 180, 180);
+  padding: 5px;
+  width: 300px;
+  margin: auto;
+  
+  
+  }
+
+.income span {
+
+  font-size: 30px;
+  color: green;
+  font-weight: bolder;
+  border: solid;
+  background-color: white;
+  border-color: white;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: gray 2px 2px 3px 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.expense span {
+
+  font-size: 30px;
+  color: red;
+  font-weight: bolder;
+  border: solid;
+  background-color: white;
+  border-color: white;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: gray 2px 2px 3px 3px;
+}
+
+.form {
+
+  
+  color: rgb(56, 56, 56);
+  margin-top: 30px;
+  align-content: center;
+  display: flex;
+}
+
+.plus  {
+
+  box-shadow: gray 2px 2px 3px 3px;
+  border-radius: 10px;
+  background-color: rgb(195, 200, 241);
+  padding: 20px;
+  width: 200px;
+  margin: auto;
+
+}
+
+.minus {
+
+box-shadow: gray 2px 2px 3px 3px;
+border-radius: 10px;
+background-color: rgb(236, 180, 180);
+padding: 20px;
+width: 200px;
+margin: auto;
+}
+
+.plus button {
+
+  
+  font-size: 20px;
+  background-color: rgb(155, 162, 211);
+  box-shadow: gray 2px 2px 2px 2px;
+  height: 40px;
+  width: 185px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.minus button {
+
+  font-size: 20px;
+  background-color: rgb(255, 152, 152);
+  box-shadow:gray 2px 2px 2px 2px;
+  height: 40px;
+  width: 185px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.foot {
+
+  background-color: white;
+  margin-top: 30px;
+  font-size: 20px;
+  color: rgb(56, 56, 56);
+  border-radius: 10px;
+  box-shadow: gray 2px 2px 3px 3px;
+  width: fit-content;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
