@@ -1,9 +1,9 @@
 import React, {createContext, useReducer} from 'react';
 import AppReducer from  './AppReducer';
 
-const iniState = {
+const initialState = {
 
-initState: [
+transactions: [
 
     {id: 1, text: 'Flower', amount: 300 },
     {id: 1, text: 'Sale', amount: 300 },
@@ -12,23 +12,23 @@ initState: [
 }
 
 
-export const Context = createContext(iniState);
+export const GlobalContext = createContext(initialState);
 
 
 
 
-export const GlobalProvider = ({child}) => {
+export const GlobalProvider = ({children}) => {
 
-    const [state, dispatch] = useReducer(AppReducer, iniState);
+    const [state, dispatch] = useReducer(AppReducer, initialState);
 
     return (
-        <Context.Provider value = {{
-            initState: state.initState
+        <GlobalContext.Provider value = {{
+            transactions: state.transactions
         }}>
 
-            {child}
+            {children}
 
-        </Context.Provider>
+        </GlobalContext.Provider>
     )
 
 }

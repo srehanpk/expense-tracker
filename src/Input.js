@@ -1,8 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+import {GlobalContext} from './Context';
 
 
 
 function Input  () {
+
+        const context = useContext(GlobalContext);
+
+        console.log(context);
+
 
      const [incText, setIncText] = useState("");
      const [incAmount, setIncAmount] = useState("");
