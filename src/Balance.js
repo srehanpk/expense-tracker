@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {balanceContext} from './Context';
 
 
 
@@ -6,6 +7,8 @@ import React from 'react';
 
 
 function Balance  () {
+
+    let balance = useContext(balanceContext);
 
 
     return (
@@ -15,7 +18,7 @@ function Balance  () {
 
                 <h2>Your Current Balance   </h2>
           
-                <span>$1000</span>
+                <span>${balance}</span>
                
 
             </div>

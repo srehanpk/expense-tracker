@@ -7,22 +7,25 @@ import Footer from './Footer.js';
 
 
 
+
 function App() {
 
   
-
   
   return (
+
+    
     <div className="App">
       <h1>Expense Tracker </h1>
 
-    <>
+    
       <Balance />
       <Income />
       <Input />
       <Footer />
-     </>
+    
     </div>
+   
   );
 }
 

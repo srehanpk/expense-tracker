@@ -1,9 +1,12 @@
-import React from 'react';
-
+import React, {useContext} from 'react';
+import {incomeContext} from './Context';
+import {expenseContext} from './Context';
 
 
 function Income  () {
 
+        let income = useContext(incomeContext);
+        let expense = useContext(expenseContext);
 
     return (
 
@@ -13,7 +16,7 @@ function Income  () {
 
                     <h2>Total Income  </h2> 
                 
-                    <span>$2000</span>
+                    <span>${income}</span>
                     
 
                 </div>
@@ -24,7 +27,7 @@ function Income  () {
 
                     <h2>Total Expense</h2>
                     
-                    <span>$2000</span>
+                    <span>${expense}</span>
 
                 
                 </div>
