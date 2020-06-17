@@ -25,14 +25,14 @@ margin-right: auto;
 
 .balance {
 
-
+ text-align: center; 
  background-color: white;
  box-shadow: gray 2px 2px 3px 3px;
  border: none;
- border-radius: 20px;
+ border-radius: 10px;
  width: 200px;
  height: 50px;
- padding: 10px;
+ padding: 2px;
  margin: auto;
    
 }
@@ -55,7 +55,7 @@ margin-right: auto;
   padding: 10px;
   background-color: yellowgreen;
   box-shadow: gray 2px 2px 3px 3px;
-
+  
  
 }
 

@@ -42,7 +42,7 @@ function Income  () {
 
                     <h2>Total Expense</h2>
                     
-                    <span>$</span>
+                    <span>$ 1000</span>
 
                 
                 </div>
