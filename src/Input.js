@@ -1,13 +1,14 @@
 import React, {useState, useContext} from 'react';
 import {GlobalContext} from './Context';
+import {Transaction} from './Trans';
 
 
 
 function Input  () {
 
-        const context = useContext(GlobalContext);
+        const {transactions} = useContext(GlobalContext);
 
-        console.log(context);
+        
 
 
      const [incText, setIncText] = useState("");
@@ -22,35 +23,47 @@ function Input  () {
 
 
                 <div className="plus">
-                    
-                    <li></li>
-                    
-                        <br/> 
-                    <form >
+
+                <form >
                     <b>Description</b><input type = "text" value={incText} onChange={(e)=>setIncText(e.target.value)}  placeholder="input text" ></input>
   
                     <br/>
                     <b>Amount</b><input type = "text" value={incAmount} onChange={(e)=>setIncAmount(e.target.value)} placeholder="Input Amount" ></input>
                     <br/><br/>
-                    <button>Add Income</button>
+                    <button className="plus-btn">Add Income</button>
                     </form>
+
+
+                    <h3>History</h3>
+                    <ul className="list">
+                    {transactions.map(transaction => (<Transaction key={transaction.id} transaction={transaction} />))}
+                    
+                    </ul>
+                        <br/> 
+                    
 
                 </div>
 
 
                 <div className="minus"> 
 
-                    <li></li>
-
-                    <br/>
-                    <form>
+                <form>
                     <b>Description</b><input type = "text" value={expText} onChange={(e)=>setExpText(e.target.value)} placeholder="input text" ></input>
 
                     <br/> 
                     <b>Amount</b><input type = "text" value={expAmount} onChange={(e)=>setExpAmount(e.target.value)} placeholder="Input Amount" ></input>
                     <br/><br/>
-                    <button>Add Expense</button>
+                    <button className="minus-btn">Add Expense</button>
                     </form>
+
+                    <h3>History</h3>
+                    <ul className="list">
+                    <li className="li">
+                      <span></span>
+                    </li>
+                    </ul>
+                    <br/>
+                    
 
                 </div>
             </div>

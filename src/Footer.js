@@ -11,7 +11,7 @@ function Footer  () {
        
             <div className="foot">
 
-                <span>Prepeard By Rayhan Ahmed</span>
+                <span>By Rayhan Ahmed</span>
                
 
             </div>

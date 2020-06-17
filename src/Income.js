@@ -1,10 +1,27 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {GlobalContext} from './Context';
 
 
 
 function Income  () {
 
-        
+    const {transactions} = useContext(GlobalContext);
+
+    const amounts = transactions.map(transaction => transaction.amount);
+
+    // const total = amounts.reduce((acc, item) => (acc += item), 0)
+    // .toFixed(2);
+
+    const inc =amounts
+    // .filter(item => item > 0)
+     .reduce((acc, item) => (acc += item), 0)
+    // .toFixed(2);
+
+    // const exp = (amount.filter(item => item < 0)
+    // .reduce((acc, item) => (acc, item), 0)*-1)
+    // .toFixed(2);
+
+
     return (
 
             <div className="add">
@@ -13,7 +30,7 @@ function Income  () {
 
                     <h2>Total Income  </h2> 
                 
-                    <span>$</span>
+                    <span>$ {inc}</span>
                    
                     
 

@@ -120,51 +120,77 @@ margin: auto;
 .form {
 
   
-  display: flex;
   color: rgb(56, 56, 56);
   margin-top: 30px;
+  display: flex;
   
 }
 
 .plus  {
 
-  box-shadow: gray 2px 2px 3px 3px;
+  /* box-shadow: gray 2px 2px 3px 3px;
   border-radius: 10px;
   background-color: rgb(195, 200, 241);
   padding: 20px;
   width: 200px;
   margin: auto;
+  text-align: left; */
+
+box-shadow: gray 2px 2px 3px 3px;
+border-radius: 10px;
+background-color: rgb(195, 200, 241);
+padding: 5px;
+width: 300px;
+margin: auto;
 
 }
 
-.minus {
+.plus input {
 
+  width: 60px;
+}
+
+.minus {
+/* 
 box-shadow: gray 2px 2px 3px 3px;
 border-radius: 10px;
 background-color: rgb(236, 180, 180);
 padding: 20px;
 width: 200px;
 margin: auto;
+text-align: left; */
+
+box-shadow: gray 2px 2px 3px 3px;
+border-radius: 10px;
+background-color: rgb(195, 200, 241);
+padding: 5px;
+width: 300px;
+margin: auto;
 }
 
-.plus button {
+.minus input {
+
+  width: 60px;
+}
+
+.plus-btn {
 
   
   font-size: 20px;
   background-color: rgb(155, 162, 211);
   box-shadow: gray 2px 2px 2px 2px;
-  height: 40px;
-  width: 185px;
+  /* height: 40px;
+  width: 185px; */
   border-radius: 10px;
   cursor: pointer;
 }
-.minus button {
+.minus-btn {
 
   font-size: 20px;
   background-color: rgb(255, 152, 152);
   box-shadow:gray 2px 2px 2px 2px;
-  height: 40px;
-  width: 185px;
+  /* height: 40px;
+  width: 185px; */
   border-radius: 10px;
   cursor: pointer;
 }
@@ -181,4 +207,35 @@ margin: auto;
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.del-btn {
+
+float: left;
+color: crimson;
+background-color: rgb(253, 253, 1);
+margin-right: 5px;
+}
+
+.list {
+
+  list-style: none;
+  text-align: left;
+ 
+}
+.li {
+  
+  /* background-color: white;
+  border: none;
+  border-radius: 5px; */
+  
+  
+  
+
+}
+
+.li span {
+    
+  float: right;
+ 
 }

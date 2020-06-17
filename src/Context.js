@@ -6,8 +6,8 @@ const initialState = {
 transactions: [
 
     {id: 1, text: 'Flower', amount: 300 },
-    {id: 1, text: 'Sale', amount: 300 },
-    {id: 1, text: 'Shose', amount: 300 }
+    {id: 2, text: 'Sale', amount: 400 },
+    {id: 3, text: 'Shose', amount: 300 }
 ]
 }
 
@@ -21,9 +21,19 @@ export const GlobalProvider = ({children}) => {
 
     const [state, dispatch] = useReducer(AppReducer, initialState);
 
+
+            function del(id) {
+
+                dispatch({
+                    type: "Delete_Item",
+                    payload: id
+                });
+            }
+
     return (
         <GlobalContext.Provider value = {{
-            transactions: state.transactions
+            transactions: state.transactions,
+            del
         }}>
 
             {children}
