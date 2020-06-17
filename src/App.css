@@ -58,12 +58,11 @@ margin-right: auto;
  
 }
 
-.add {
+.inc-exp {
   
   color: rgb(56, 56, 56);
   display: flex;
-  margin-top: 60px;
-
+  margin-top: 40px;
   
 }
 
@@ -100,12 +99,13 @@ width: 200px;
   font-size: 30px;
   color: green;
   font-weight: bolder;
-  border: solid;
+  border-top: solid 2px green;
   background-color: white;
-  border-color: white;
   border-radius: 10px;
   padding: 5px;
   box-shadow: gray 2px 2px 3px 3px;
+  margin-left: 10px;
+  
 }
 
 .expense span {
@@ -113,12 +113,12 @@ width: 200px;
   font-size: 30px;
   color: red;
   font-weight: bolder;
-  border: solid;
+  border-top: solid 2px red;
   background-color: white;
-  border-color: white;
   border-radius: 10px;
   padding: 5px;
   box-shadow: gray 2px 2px 3px 3px;
+  margin-left: 10px;
 }
 
 .form {

@@ -24,11 +24,11 @@ function Income  () {
 
     return (
 
-            <div className="add">
+            <div className="inc-exp">
                 <div className="income"> 
 
 
-                    <h2>Total Income  </h2> 
+                    <h3>Total Income  </h3> 
                 
                     <span>$ {inc}</span>
                    
@@ -40,7 +40,7 @@ function Income  () {
                 <div className="expense"> 
 
 
-                    <h2>Total Expense</h2>
+                    <h3>Total Expense</h3>
                     
                     <span>$ 1000</span>
 
