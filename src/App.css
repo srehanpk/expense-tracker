@@ -96,7 +96,7 @@ width: 200px;
 
 .income span {
 
-  font-size: 30px;
+  font-size: 20px;
   color: green;
   font-weight: bolder;
   border-top: solid 2px green;
@@ -110,7 +110,7 @@ width: 200px;
 
 .expense span {
 
-  font-size: 30px;
+  font-size: 20px;
   color: red;
   font-weight: bolder;
   border-top: solid 2px red;
@@ -123,7 +123,6 @@ width: 200px;
 
 .form {
 
-  
   color: rgb(56, 56, 56);
   margin-top: 30px;
   display: flex;
@@ -132,53 +131,67 @@ width: 200px;
 
 .plus  {
 
-text-align: center;
 box-shadow: gray 2px 2px 3px 3px;
 border-top: solid 3px green;
 border-radius: 10px;
 background-color: white;
 padding: 5px;
-width: 300px;
+width: 200px;
 margin: auto;
-
 }
 
 .plus input {
 
-  width: 80px;
+  width: 100px;
+  float: right;
+}
+
+.plus h3 {
+
+  text-align: center;
 }
 
 .minus {
 
-text-align: center;
 box-shadow: gray 2px 2px 3px 3px;
 border-top: solid 3px red;
 border-radius: 10px;
 background-color: white;
 padding: 5px;
-width: 300px;
+width: 200px;
 margin: auto;
 }
 
 .minus input {
 
-  width: 80px;
+  width: 100px;
+  float: right;
+}
+.minus h3 {
+
+  text-align: center;
 }
 
 .plus-btn {
 
-  
-  font-size: 20px;
-  box-shadow: gray 2px 2px 2px 2px;
+  color: white;
+  font-size: 10px;
+  font-weight: bolder;
+  box-shadow: gray 2px 2px 2px 0px;
   border-radius: 10px;
   cursor: pointer;
+  background-color: green;
+  
 }
 .minus-btn {
 
-  font-size: 20px;
-  box-shadow:gray 2px 2px 2px 2px;
+  color: white;
+  font-size: 10px;
+  font-weight: bolder;
+  box-shadow:gray 2px 2px 2px 0px;
   border-radius: 10px;
   cursor: pointer;
+  background-color: red;
 }
 
 .foot {
