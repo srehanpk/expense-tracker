@@ -4,9 +4,15 @@ export default (state, action) => {
         case "Delete_Item":
             return {
 
-            ...state, transactions: state.transactions.filter(transaction => transaction.id !== action.payload)
+            ...state, transaction: state.transaction.filter(transaction => transaction.id !== action.payload)
             }
+        case "Add_Item":
+            return {
+
+            ...state, transaction: [action.payload, ...state.transaction]
+            
+        }
         default:
             return state;
+        }
     }
-}

@@ -5,22 +5,19 @@ import {GlobalContext} from './Context';
 
 function Income  () {
 
-    const {transactions} = useContext(GlobalContext);
+    const {transaction} = useContext(GlobalContext);
+    const amounts = transaction.map(transaction => transaction.amount);
 
-    const amounts = transactions.map(transaction => transaction.amount);
-
-    // const total = amounts.reduce((acc, item) => (acc += item), 0)
-    // .toFixed(2);
+    
+    
 
     const inc =amounts
-    .filter(item => item > 0)
-     .reduce((acc, item) => (acc += item), 0)
-    .toFixed(2);
+    .filter(amount => amount > 0)
+    .reduce((acc, amount) => (acc += amount), 0);
 
-    const exp = (amounts.filter(item => item < 0)
-    .reduce((acc, item) => (acc += item), 0)*-1)
-    .toFixed(2);
-
+    const exp = (amounts
+    .filter(amount => amount < 0)
+    .reduce((acc, amount) => (acc += amount), 0)*-1);
     
 
     return (

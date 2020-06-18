@@ -6,18 +6,50 @@ import {Transaction} from './Trans';
 
 function Input  () {
 
-        const {transactions} = useContext(GlobalContext);
+        const {transaction} = useContext(GlobalContext);
 
+
+     const [text, setText] = useState("");
+     const [amount, setAmount] = useState();
+
+     let [expText, setExpText] = useState("");
+     let [expAmount, setExpAmount] = useState();
+
+    const change =(e) => {setExpAmount(Number(-e.target.value))}
+    
+    const {add} = useContext(GlobalContext);
+
+
+    
+    const onExpense = (e) => {
+        e.preventDefault();
+
+        let obj1 = {
+            id: Math.floor(Math.random() * 100000000),
+            expText,
+            expAmount
+    } 
+            let trans = {id: obj1.id, text: obj1.expText, amount: obj1.expAmount};
+            add(trans);
+            
+    }
+
+     
+     const onIncome = (e) => {
+         e.preventDefault();
+
+         let transaction = {
+             id: Math.floor(Math.random() * 100000000),
+             text,
+             amount: +amount 
+            }
+            
+            add(transaction);
+            
+        }
+        
         
 
-
-     const [incText, setIncText] = useState("");
-     const [incAmount, setIncAmount] = useState(0);
-
-     const [expText, setExpText] = useState("");
-     const [expAmount, setExpAmount] = useState(0);
-
-   
     return (
 
             <div>
@@ -25,13 +57,13 @@ function Input  () {
                 <div className="form">
                 <div className="plus">
 
-                <form >
+                <form onSubmit={onIncome}>
                     <b>Description:</b>
-                    <input type = "text" value={incText} onChange={(e)=>setIncText(e.target.value)}  placeholder="input text" ></input>
+                    <input type = "text" value={text} onChange={(e)=>setText(e.target.value)}  placeholder="input text" ></input>
   
                     <br/><br/>
                     <b>Amount:</b>
-                    <input type = "text" value={incAmount} onChange={(e)=>setIncAmount(e.target.value)} placeholder="Input Amount" ></input>
+                    <input type = "number" value={amount} onChange={(e)=>setAmount(e.target.value)} placeholder="input amount" ></input>
                     <br/><br/>
                     <button className="plus-btn">Add Income</button>
                     </form>
@@ -40,42 +72,34 @@ function Input  () {
                 
                 <div className="minus"> 
 
-                <form>
+                <form onSubmit={onExpense}>
                     <b>Description:</b>
                     <input type = "text" value={expText} onChange={(e)=>setExpText(e.target.value)} placeholder="input text" ></input>
 
                     <br/> <br/>
                     <b>Amount:</b>
-                    <input type = "text" value={expAmount} onChange={(e)=>setExpAmount(e.target.value)} placeholder="Input Amount" ></input>
+                    <input type = "number" value={expAmount} onChange={change} placeholder="Input Amount" ></input>
                     <br/><br/>
-                    <button className="minus-btn">Add Expense</button>
+                    <button  className="minus-btn">Add Expense</button>
                     </form>
                 </div>
                 </div>
 
 
-                <div className="form">
-                    <div className="plus">
+                <div className="list-div">
                     <h3>History</h3>
 
                     <ul className="list">
-                    {transactions.map(transaction => (
-                        <Transaction key={transaction.id} transaction={transaction} />))}
+                    {transaction.map(transaction => (
+                        <Transaction key={transaction.id} transaction={transaction}  />))}
                     
                     </ul>
-                    </div>
+                    
 
 
 
-                    <div className="minus">
-                    <h3>History</h3>
-                    <ul className="list">
-                    <li className="li">
-                      <span></span>
-                    </li>
-                    </ul>
-                    </div>
-                    </div>
+
+             </div>      
             </div>
 
     )

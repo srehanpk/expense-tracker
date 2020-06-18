@@ -167,10 +167,7 @@ margin: auto;
   width: 100px;
   float: right;
 }
-.minus h3 {
 
-  text-align: center;
-}
 
 .plus-btn {
 
@@ -216,10 +213,23 @@ background-color: rgb(253, 253, 1);
 margin-right: 5px;
 }
 
+.list-div{
+
+  box-shadow: gray 2px 2px 3px 3px;
+border-left: solid 3px green;
+border-right: solid 3px red;
+border-radius: 10px;
+background-color: white;
+padding: 5px;
+width: 200px;
+margin: auto
+}
+
 .list {
 
   list-style: none;
-  text-align: left;
+  
+  
  
 }
 .li {
