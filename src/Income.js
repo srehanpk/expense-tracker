@@ -13,14 +13,15 @@ function Income  () {
     // .toFixed(2);
 
     const inc =amounts
-    // .filter(item => item > 0)
+    .filter(item => item > 0)
      .reduce((acc, item) => (acc += item), 0)
-    // .toFixed(2);
+    .toFixed(2);
 
-    // const exp = (amount.filter(item => item < 0)
-    // .reduce((acc, item) => (acc, item), 0)*-1)
-    // .toFixed(2);
+    const exp = (amounts.filter(item => item < 0)
+    .reduce((acc, item) => (acc += item), 0)*-1)
+    .toFixed(2);
 
+    
 
     return (
 
@@ -42,7 +43,7 @@ function Income  () {
 
                     <h3>Total Expense</h3>
                     
-                    <span>$ 1000</span>
+                    <span>$ {exp}</span>
 
                 
                 </div>
