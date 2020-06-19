@@ -6,10 +6,10 @@ function Input() {
   const { transaction } = useContext(GlobalContext);
 
   const [text, setText] = useState("");
-  const [amount, setAmount] = useState();
+  const [amount, setAmount] = useState("");
 
   let [expText, setExpText] = useState("");
-  let [expAmount, setExpAmount] = useState();
+  let [expAmount, setExpAmount] = useState("");
 
 
   const { add } = useContext(GlobalContext);
@@ -24,6 +24,8 @@ function Input() {
     };
     let trans = { id: obj1.id, text: obj1.expText, amount: obj1.expAmount };
     add(trans);
+    setExpText("");
+    setExpAmount("");
   };
 
   const onIncome = (e) => {
@@ -36,6 +38,8 @@ function Input() {
     };
 
     add(transaction);
+    setText("");
+    setAmount("");
   };
 
   return (
