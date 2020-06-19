@@ -96,7 +96,7 @@ function Input() {
 
       <div className="list-div">
         <h3>Transaction History</h3>
-
+       
         <ul className="list">
           {transaction.map((transaction) => (
             <Transaction key={transaction.id} transaction={transaction} />

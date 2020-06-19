@@ -12,7 +12,8 @@ export const Transaction = ({ transaction }) => {
           x
         </button>
         {transaction.text} <span> $ {transaction.amount} </span>
-      </li>
+        </li>
+        
       <br />
     </div>
   );

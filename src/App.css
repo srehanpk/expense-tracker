@@ -177,7 +177,6 @@ margin-right: auto;
   background-color: green;
   width: 80px;
   
-  
 }
 .minus-btn {
 
@@ -195,9 +194,17 @@ margin-right: auto;
   
   float: left;
   color: crimson;
-  background-color: rgb(253, 253, 1);
+  cursor: pointer;
+  background-color: rgb(255, 218, 8);
   margin-right: 5px;
+  border-radius: 50%;
+  font-weight: bolder;
 
+} 
+
+.del-btn:hover {
+  background-color: red;
+  color: white;
 }
 
 .list-div{
@@ -230,6 +237,7 @@ text-align: center;
   background-color: rgb(241, 235, 235);
   border: none;
   border-radius: 3px;
+  box-shadow: gray 0px 0px 2px 2px;
   font-size: 20px;
   color: green;
   width: 318px;
@@ -241,6 +249,7 @@ text-align: center;
   background-color: rgb(241, 235, 235);
   border: none;
   border-radius: 3px;
+  box-shadow: gray 0px 0px 2px 2px;
   font-size: 20px;
   color: red;
   width: 318px;
