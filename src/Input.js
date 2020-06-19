@@ -11,9 +11,6 @@ function Input() {
   let [expText, setExpText] = useState("");
   let [expAmount, setExpAmount] = useState();
 
-  const change = (e) => {
-    setExpAmount(Number(-e.target.value));
-  };
 
   const { add } = useContext(GlobalContext);
 
@@ -23,7 +20,7 @@ function Input() {
     let obj1 = {
       id: Math.floor(Math.random() * 100000000),
       expText,
-      expAmount,
+      expAmount: -expAmount
     };
     let trans = { id: obj1.id, text: obj1.expText, amount: obj1.expAmount };
     add(trans);
@@ -83,7 +80,7 @@ function Input() {
             <input
               type="number"
               value={expAmount}
-              onChange={change}
+              onChange={(e) => setExpAmount(e.target.value)}
               placeholder="Input Amount"
             ></input>
             <br />
