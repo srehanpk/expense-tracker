@@ -1,53 +1,34 @@
-import React, {useContext} from 'react';
-import {GlobalContext} from './Context';
+import React, { useContext } from "react";
+import { GlobalContext } from "./Context";
 
+function Income() {
+  const { transaction } = useContext(GlobalContext);
+  const amounts = transaction.map((transaction) => transaction.amount);
 
-
-function Income  () {
-
-    const {transaction} = useContext(GlobalContext);
-    const amounts = transaction.map(transaction => transaction.amount);
-
-    
-    
-
-    const inc =amounts
-    .filter(amount => amount > 0)
+  const inc = amounts
+    .filter((amount) => amount > 0)
     .reduce((acc, amount) => (acc += amount), 0);
 
-    const exp = (amounts
-    .filter(amount => amount < 0)
-    .reduce((acc, amount) => (acc += amount), 0)*-1);
-    
+  const exp =
+    amounts
+      .filter((amount) => amount < 0)
+      .reduce((acc, amount) => (acc += amount), 0) * -1;
 
-    return (
+  return (
+    <div className="inc-exp">
+      <div className="income">
+        <h3>Total Income </h3>
 
-            <div className="inc-exp">
-                <div className="income"> 
+        <span>$ {inc}</span>
+      </div>
 
+      <div className="expense">
+        <h3>Total Expense</h3>
 
-                    <h3>Total Income  </h3> 
-                
-                    <span>$ {inc}</span>
-                   
-                    
-
-                </div>
-
-
-                <div className="expense"> 
-
-
-                    <h3>Total Expense</h3>
-                    
-                    <span>$ {exp}</span>
-
-                
-                </div>
-               
-            </div>
-
-    )
+        <span>$ {exp}</span>
+      </div>
+    </div>
+  );
 }
 
 export default Income;

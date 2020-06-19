@@ -1,108 +1,109 @@
-import React, {useState, useContext} from 'react';
-import {GlobalContext} from './Context';
-import {Transaction} from './Trans';
+import React, { useState, useContext } from "react";
+import { GlobalContext } from "./Context";
+import { Transaction } from "./Trans";
 
+function Input() {
+  const { transaction } = useContext(GlobalContext);
 
+  const [text, setText] = useState("");
+  const [amount, setAmount] = useState();
 
-function Input  () {
+  let [expText, setExpText] = useState("");
+  let [expAmount, setExpAmount] = useState();
 
-        const {transaction} = useContext(GlobalContext);
+  const change = (e) => {
+    setExpAmount(Number(-e.target.value));
+  };
 
+  const { add } = useContext(GlobalContext);
 
-     const [text, setText] = useState("");
-     const [amount, setAmount] = useState();
+  const onExpense = (e) => {
+    e.preventDefault();
 
-     let [expText, setExpText] = useState("");
-     let [expAmount, setExpAmount] = useState();
+    let obj1 = {
+      id: Math.floor(Math.random() * 100000000),
+      expText,
+      expAmount,
+    };
+    let trans = { id: obj1.id, text: obj1.expText, amount: obj1.expAmount };
+    add(trans);
+  };
 
-    const change =(e) => {setExpAmount(Number(-e.target.value))}
-    
-    const {add} = useContext(GlobalContext);
+  const onIncome = (e) => {
+    e.preventDefault();
 
+    let transaction = {
+      id: Math.floor(Math.random() * 100000000),
+      text,
+      amount: +amount,
+    };
 
-    
-    const onExpense = (e) => {
-        e.preventDefault();
+    add(transaction);
+  };
 
-        let obj1 = {
-            id: Math.floor(Math.random() * 100000000),
-            expText,
-            expAmount
-    } 
-            let trans = {id: obj1.id, text: obj1.expText, amount: obj1.expAmount};
-            add(trans);
-            
-    }
+  return (
+    <div>
+      <div className="form">
+        <div className="plus">
+          <form onSubmit={onIncome}>
+            <b>Description:</b>
+            <input
+              type="text"
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              placeholder="input text"
+            ></input>
 
-     
-     const onIncome = (e) => {
-         e.preventDefault();
+            <br />
+            <br />
+            <b>Amount:</b>
+            <input
+              type="number"
+              value={amount}
+              onChange={(e) => setAmount(e.target.value)}
+              placeholder="input amount"
+            ></input>
+            <br />
+            <br />
+            <button className="plus-btn">Add Income</button>
+          </form>
+        </div>
 
-         let transaction = {
-             id: Math.floor(Math.random() * 100000000),
-             text,
-             amount: +amount 
-            }
-            
-            add(transaction);
-            
-        }
-        
-        
+        <div className="minus">
+          <form onSubmit={onExpense}>
+            <b>Description:</b>
+            <input
+              type="text"
+              value={expText}
+              onChange={(e) => setExpText(e.target.value)}
+              placeholder="input text"
+            ></input>
+            <br /> <br />
+            <b>Amount:</b>
+            <input
+              type="number"
+              value={expAmount}
+              onChange={change}
+              placeholder="Input Amount"
+            ></input>
+            <br />
+            <br />
+            <button className="minus-btn">Add Expense</button>
+          </form>
+        </div>
+      </div>
 
-    return (
+      <div className="list-div">
+        <h3>Transaction History</h3>
 
-            <div>
-
-                <div className="form">
-                <div className="plus">
-
-                <form onSubmit={onIncome}>
-                    <b>Description:</b>
-                    <input type = "text" value={text} onChange={(e)=>setText(e.target.value)}  placeholder="input text" ></input>
-  
-                    <br/><br/>
-                    <b>Amount:</b>
-                    <input type = "number" value={amount} onChange={(e)=>setAmount(e.target.value)} placeholder="input amount" ></input>
-                    <br/><br/>
-                    <button className="plus-btn">Add Income</button>
-                    </form>
-
-                </div>
-                
-                <div className="minus"> 
-
-                <form onSubmit={onExpense}>
-                    <b>Description:</b>
-                    <input type = "text" value={expText} onChange={(e)=>setExpText(e.target.value)} placeholder="input text" ></input>
-
-                    <br/> <br/>
-                    <b>Amount:</b>
-                    <input type = "number" value={expAmount} onChange={change} placeholder="Input Amount" ></input>
-                    <br/><br/>
-                    <button  className="minus-btn">Add Expense</button>
-                    </form>
-                </div>
-                </div>
-
-
-                <div className="list-div">
-                    <h3>History</h3>
-
-                    <ul className="list">
-                    {transaction.map(transaction => (
-                        <Transaction key={transaction.id} transaction={transaction}  />))}
-                    
-                    </ul>
-                    
-
-
-
-
-             </div>      
-            </div>
-
-    )
+        <ul className="list">
+          {transaction.map((transaction) => (
+            <Transaction key={transaction.id} transaction={transaction} />
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
 }
 
 export default Input;

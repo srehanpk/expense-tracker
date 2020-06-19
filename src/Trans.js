@@ -1,30 +1,19 @@
-import React, {useContext} from 'react';
-import  './App.css';
-import {GlobalContext} from './Context';
+import React, { useContext } from "react";
+import "./App.css";
+import { GlobalContext } from "./Context";
 
-export const Transaction = ({transaction}) => {
+export const Transaction = ({ transaction }) => {
+  const { del } = useContext(GlobalContext);
 
-     const {del} = useContext(GlobalContext);
-
-    // const check = (transaction.text);
-    // console.log(check);
-
-
-return (
-
+  return (
     <div>
-    <div>
-        <li className="li">
-        {transaction.text} <span> ${transaction.amount } </span>
-        <button onClick={()=> del(transaction.id)} className="del-btn">x</button>
-        </li>
-        <br/>
+      <li className={transaction.amount < 0 ? "li-minus" : "li-plus"}>
+        <button onClick={() => del(transaction.id)} className="del-btn">
+          x
+        </button>
+        {transaction.text} <span> $ {transaction.amount} </span>
+      </li>
+      <br />
     </div>
-
-    
-    
-    </div>
-    
-)
-
-}
+  );
+};

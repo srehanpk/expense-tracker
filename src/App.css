@@ -13,12 +13,12 @@ text-align: center;
 font-size: 30px;
 color: rgb(56, 56, 56);
 border-radius: 10px;
-box-shadow: gray 2px 2px 3px 3px;
+box-shadow: gray 0px 3px 0px 1px;
 background-color: white;
+width: max-content;
 padding: 10px;
 margin-left: auto;
 margin-right: auto;
-
 
 }
 
@@ -26,7 +26,7 @@ margin-right: auto;
 
  text-align: center; 
  background-color: white;
- box-shadow: gray 2px 2px 3px 3px;
+ box-shadow: gray 0px 0px 2px 2px;
  border: none;
  border-radius: 10px;
  width: 200px;
@@ -48,11 +48,11 @@ margin-right: auto;
   color: rgb(92, 92, 92);
   font-size: 30px;
   font-weight: bolder;
-  border: none white;
+  border: none;
   border-radius: 10px;
   padding: 10px;
   background-color: yellowgreen;
-  box-shadow: gray 2px 2px 3px 3px;
+  box-shadow: gray 0px 2px 0px 3px;
   
  
 }
@@ -61,33 +61,31 @@ margin-right: auto;
   
   color: rgb(56, 56, 56);
   display: flex;
-  margin-top: 40px;
+  box-shadow: gray 0px 3px 0px 1px;
+  border: none ;
+  margin-top: 30px;
+  background-color: white;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  
   
 }
 
 .income {
-          
-
-box-shadow: gray 2px 2px 3px 3px;
-border-top: solid 3px green;
-border-radius: 10px;
-background-color: white;
-padding: 5px;
-margin: auto;
-width: 200px;
-
-
+            
+  border-top: solid 3px green;
+  border-right-style: inset;
+  padding: 5px;
+  width: 200px;
 
 }
 .expense {
           
-
-  box-shadow: gray 2px 2px 3px 3px;
   border-top: solid 3px red;
-  border-radius: 10px;
-  background-color: white;
+  border-left-style: outset;
   padding: 5px;
-  margin: auto;
   width: 200px;
   
   
@@ -98,12 +96,10 @@ width: 200px;
   font-size: 20px;
   color: green;
   font-weight: bolder;
-  border-top: solid 2px green;
   background-color: white;
   border-radius: 10px;
   padding: 5px;
-  box-shadow: gray 2px 2px 3px 3px;
-  margin-left: 10px;
+  box-shadow: gray 0px 2px 0px 3px;
   
 }
 
@@ -112,71 +108,70 @@ width: 200px;
   font-size: 20px;
   color: red;
   font-weight: bolder;
-  border-top: solid 2px red;
   background-color: white;
   border-radius: 10px;
   padding: 5px;
-  box-shadow: gray 2px 2px 3px 3px;
-  margin-left: 10px;
+  box-shadow: gray 0px 2px 0px 3px;
+  
 }
 
 .form {
 
   color: rgb(56, 56, 56);
-  margin-top: 30px;
   display: flex;
+  box-shadow: gray 0px 3px 0px 1px;
+  border: none ;
+  margin-top: 20px;
+  background-color: white;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   
 }
 
 .plus  {
-
-box-shadow: gray 2px 2px 3px 3px;
-border-top: solid 3px green;
-border-radius: 10px;
-background-color: white;
-padding: 5px;
-width: 200px;
-margin: auto;
+  
+  border-top: solid 3px green;
+  border-right-style: inset;
+  padding: 8px;
+  width: 200p
+  
 }
 
 .plus input {
 
   width: 100px;
   float: right;
-}
 
-.plus h3 {
-
-  text-align: center;
 }
 
 .minus {
 
-box-shadow: gray 2px 2px 3px 3px;
-border-top: solid 3px red;
-border-radius: 10px;
-background-color: white;
-padding: 5px;
-width: 200px;
-margin: auto;
+  border-top: solid 3px red;
+  border-left-style: outset;
+  padding: 8px;
+  width: 200p
+
 }
 
 .minus input {
 
   width: 100px;
   float: right;
-}
 
+}
 
 .plus-btn {
 
   color: white;
   font-size: 10px;
   font-weight: bolder;
-  box-shadow: gray 2px 2px 2px 0px;
   border-radius: 10px;
   cursor: pointer;
   background-color: green;
+  width: 80px;
+  
   
 }
 .minus-btn {
@@ -184,66 +179,92 @@ margin: auto;
   color: white;
   font-size: 10px;
   font-weight: bolder;
-  box-shadow:gray 2px 2px 2px 0px;
   border-radius: 10px;
   cursor: pointer;
   background-color: red;
+  width: 80px;
 }
 
-.foot {
 
+.del-btn {
+  
+  float: left;
+  color: crimson;
+  background-color: rgb(253, 253, 1);
+  margin-right: 5px;
+
+}
+
+.list-div{
+  
+  border-left: solid 3px green;
+  border-right: solid 3px red;
   background-color: white;
-  margin-top: 30px;
+  padding: 5px;
+  margin: auto;
+  color: rgb(56, 56, 56);
+  box-shadow: gray 0px 3px 0px 1px;
+  margin-top: 20px;
+  width: 400px;
+  
+
+}
+.list-div h3{
+
+text-decoration: underline;
+text-align: center;
+}
+
+.list {
+  
+  list-style: none;
+   
+}
+.li-plus {
+  
+  background-color: rgb(241, 235, 235);
+  border: none;
+  border-radius: 3px;
+  font-size: 20px;
+  color: green;
+  width: 318px;
+  
+}
+
+.li-minus {
+  
+  background-color: rgb(241, 235, 235);
+  border: none;
+  border-radius: 3px;
+  font-size: 20px;
+  color: red;
+  width: 318px;
+  text-transform: capitalize;
+  
+}
+
+.li-plus span {
+  
+  float: right;
+  margin-right: 10px;
+  
+}
+.li-minus span {
+  
+  float: right;
+  margin-right: 10px;
+  
+}
+.foot {
+    
+  background-color: white;
+  margin-top: 20px;
   font-size: 20px;
   color: rgb(56, 56, 56);
-  border-radius: 10px;
-  box-shadow: gray 2px 2px 3px 3px;
+  box-shadow: gray 0px 2px 0px 3px;
+  border-radius: 5px;
   width: fit-content;
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.del-btn {
-
-float: left;
-color: crimson;
-background-color: rgb(253, 253, 1);
-margin-right: 5px;
-}
-
-.list-div{
-
-  box-shadow: gray 2px 2px 3px 3px;
-border-left: solid 3px green;
-border-right: solid 3px red;
-border-radius: 10px;
-background-color: white;
-padding: 5px;
-width: 200px;
-margin: auto
-}
-
-.list {
-
-  list-style: none;
-  
-  
- 
-}
-.li {
-  
-  /* background-color: white;
-  border: none;
-  border-radius: 5px; */
-  
-  
-  
-
-}
-
-.li span {
-    
-  float: right;
- 
-}
+  }
