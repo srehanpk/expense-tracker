@@ -11,8 +11,8 @@ function Balance() {
     <div className="balance">
       <h2>Your Current Balance </h2>
 
-      <span>${total}</span>
-    </div>
+      <span className={total < 0 ? "nb" : "pb"}>${total}</span>
+    </div >
   );
 }
 

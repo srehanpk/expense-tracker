@@ -30,6 +30,7 @@ margin-right: auto;
    
 }
 
+
 .balance h2 {
  
   color: rgb(56, 56, 56);
@@ -38,7 +39,7 @@ margin-right: auto;
 }
 
 
-.balance span {
+.pb {
 
   color: rgb(92, 92, 92);
   font-size: 30px;
@@ -48,10 +49,20 @@ margin-right: auto;
   padding: 10px;
   background-color: yellowgreen;
   box-shadow: gray 0px 2px 0px 3px;
-  
  
 }
+.nb {
 
+  color: white;
+  font-size: 30px;
+  font-weight: bolder;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: crimson;
+  box-shadow: gray 0px 2px 0px 3px;
+ 
+}
 .inc-exp {
   
   color: rgb(56, 56, 56);
