@@ -2,7 +2,7 @@
 Project One For Bootcamp 2020
 
 
-##In This App
+## In This App
 
 1. This App is a simple expense tracker app whitch manage your income expance history and current balance.
 
@@ -17,8 +17,11 @@ and if any of input field are blank add amount button will not work and popup a 
 
 5.Transaction history component manage incom/expense entries with its discription and amount for both income/expense separately and also show in diffrent color like green font color for income entries and red font color for expense entries.
 
-6. Transaction list have a delete entry button for each income/expense entry and change its color into red when mouse hover .
+6. Transaction list have a delete entry button for each income/expense entry and change its color into red when mouse hover.
 
+
+                    --------------------------------------------------------------------------------
+                    --------------------------------------------------------------------------------
 
 
 
