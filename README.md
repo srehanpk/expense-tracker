@@ -1,21 +1,21 @@
-## Expence Tracker App 
-Project One For Bootcamp 2020
+## Expense Tracker App 
+Project One For Boot camp 2020
 
 
 ## In This App
 
-1. This App is a simple expense tracker app whitch manage your income expance history and current balance.
+1. This App is a simple expense tracker app which manage your income expanse history and current balance.
 
 2. In this app i used useState, useContext and useReducer.
 
-3. The current balance component will display your balance according to incom & expense and will change its color into red when current balance is negetive. 
+3. The current balance component will display your balance according to income & expense and will change its color into red when current balance is negative. 
 
-4.The income/expense component will disply total income and total expence separately.
+4.The income/expense component will display total income and total expense separately.
 
-5.In form component there is two input feilds for discription and amount for both income and expence separately no need to put (-)negative sing for negative input just type amount for income in the income field and for expence in expense field 
+5.In form component there is two input fields for description and amount for both income and expense separately no need to put (-)negative sing for negative input just type amount for income in the income field and for expense in expense field 
 and if any of input field are blank add amount button will not work and popup a message box.
 
-5.Transaction history component manage incom/expense entries with its discription and amount for both income/expense separately and also show in diffrent color like green font color for income entries and red font color for expense entries.
+5.Transaction history component manage income/expense entries with its description and amount for both income/expense separately and also show in different color like green font color for income entries and red font color for expense entries.
 
 6. Transaction list have a delete entry button for each income/expense entry and change its color into red when mouse hover.
 
