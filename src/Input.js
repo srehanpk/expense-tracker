@@ -53,6 +53,7 @@ function Input() {
               value={text}
               onChange={(e) => setText(e.target.value)}
               placeholder="input text"
+              required
             ></input>
 
             <br />
@@ -63,6 +64,8 @@ function Input() {
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
               placeholder="input amount"
+              required
+              min="1"
             ></input>
             <br />
             <br />
@@ -78,6 +81,7 @@ function Input() {
               value={expText}
               onChange={(e) => setExpText(e.target.value)}
               placeholder="input text"
+              required
             ></input>
             <br /> <br />
             <b>Amount:</b>
@@ -86,6 +90,8 @@ function Input() {
               value={expAmount}
               onChange={(e) => setExpAmount(e.target.value)}
               placeholder="Input Amount"
+              required
+              min="1"
             ></input>
             <br />
             <br />

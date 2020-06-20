@@ -1,5 +1,5 @@
 body {
-background-color: whitesmoke;
+background-color: white;
 }
 
 .App h1 {
@@ -9,23 +9,25 @@ font-size: 30px;
 color: rgb(56, 56, 56);
 border-radius: 10px;
 box-shadow: gray 0px 3px 0px 1px;
-background-color: white;
+/* background-color: white; */
 width: max-content;
 padding: 10px;
 margin-left: auto;
 margin-right: auto;
+text-shadow: 5px 5px 5px lightslategray;
+letter-spacing: 3px;
 
 }
 
 .balance {
 
  text-align: center; 
- background-color: white;
+ /* background-color: white; */
  box-shadow: gray 0px 0px 2px 2px;
  border: none;
  border-radius: 10px;
- width: 200px;
- padding: 2px;
+ width: max-content;
+ padding: 5px;
  margin: auto;
    
 }
@@ -67,30 +69,28 @@ margin-right: auto;
   
   color: rgb(56, 56, 56);
   display: flex;
-  box-shadow: gray 0px 3px 0px 1px;
-  border: none ;
-  margin-top: 30px;
-  background-color: white;
+  /* box-shadow: gray 0px 3px 0px 1px; */
+  margin-top: 20px;
+  /* background-color: white; */
   width: max-content;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  
 }
 
 .income {
             
   border-top: solid 3px green;
-  border-right-style: inset;
-  padding: 5px;
+  /* border-right-style: inset; */
+  /* padding: 5px; */
   width: 200px;
 
 }
 .expense {
           
-  border-top: solid 3px red;
-  border-left-style: outset;
-  padding: 5px;
+   border-top: solid 3px red; 
+  /* border-left-style: outset; */
+  /* padding: 5px; */
   width: 200px;
   
   
@@ -124,14 +124,16 @@ margin-right: auto;
 
   color: rgb(56, 56, 56);
   display: flex;
-  box-shadow: gray 0px 3px 0px 1px;
+ 
+  /* box-shadow: gray 0px 3px 0px 1px; */
   border: none ;
-  margin-top: 20px;
-  background-color: white;
-  width: max-content;
+  margin-top: 10px;
+  /* background-color: white; */
+  width: fit-content;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  padding: 10px;
   
 }
 
@@ -143,8 +145,11 @@ margin-right: auto;
   width: 200p
   
 }
+.plus b {
+  float: left;
+}
 
-.plus input {
+.plus input  {
 
   width: 100px;
   float: right;
@@ -157,7 +162,9 @@ margin-right: auto;
   border-left-style: outset;
   padding: 8px;
   width: 200p
-
+}
+.minus b {
+  float: left;
 }
 
 .minus input {
@@ -193,30 +200,30 @@ margin-right: auto;
 .del-btn {
   
   float: left;
-  color: crimson;
+  color: lightslategray;
   cursor: pointer;
-  background-color: rgb(255, 218, 8);
-  margin-right: 5px;
+  margin-right: 10px;
   border-radius: 50%;
   font-weight: bolder;
 
 } 
 
 .del-btn:hover {
-  background-color: red;
-  color: white;
+  color: red;
+  
 }
 
 .list-div{
   
   border-left: solid 3px green;
   border-right: solid 3px red;
-  background-color: white;
+  border-top: solid 2px lightgray;
+  /* background-color: white; */
   padding: 5px;
   margin: auto;
   color: rgb(56, 56, 56);
   box-shadow: gray 0px 3px 0px 1px;
-  margin-top: 20px;
+  margin-top: 5px;
   width: 400px;
   
 
@@ -271,11 +278,11 @@ text-align: center;
 }
 .foot {
     
-  background-color: white;
+  /* background-color: white; */
   margin-top: 20px;
   font-size: 20px;
   color: rgb(56, 56, 56);
-  box-shadow: gray 0px 2px 0px 3px;
+  box-shadow: gray 0px 3px 0px 1px;
   border-radius: 5px;
   width: fit-content;
   padding: 10px;
