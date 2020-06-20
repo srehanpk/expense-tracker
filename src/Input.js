@@ -99,11 +99,11 @@ function Input() {
           </form>
         </div>
       </div>
-
+      
+      <h3 className="list-h3">Transaction History</h3>
       <div className="list-div">
-        <h3>Transaction History</h3>
        
-        <ul className="list">
+         <ul className="list">
           {transaction.map((transaction) => (
             <Transaction key={transaction.id} transaction={transaction} />
           ))}

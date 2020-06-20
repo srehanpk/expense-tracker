@@ -72,7 +72,7 @@ letter-spacing: 3px;
   /* box-shadow: gray 0px 3px 0px 1px; */
   margin-top: 20px;
   /* background-color: white; */
-  width: max-content;
+  width: fit-content;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -83,7 +83,9 @@ letter-spacing: 3px;
   border-top: solid 3px green;
   /* border-right-style: inset; */
   /* padding: 5px; */
-  width: 200px;
+  width: fit-content;
+  padding-right: 60px;
+  padding-left: 30px;
 
 }
 .expense {
@@ -91,7 +93,9 @@ letter-spacing: 3px;
    border-top: solid 3px red; 
   /* border-left-style: outset; */
   /* padding: 5px; */
-  width: 200px;
+  width: fit-content;
+  padding-right: 30px;
+  padding-left: 60px;
   
   
   }
@@ -142,7 +146,7 @@ letter-spacing: 3px;
   border-top: solid 3px green;
   border-right-style: inset;
   padding: 8px;
-  width: 200p
+  width: fit-content;
   
 }
 .plus b {
@@ -161,7 +165,7 @@ letter-spacing: 3px;
   border-top: solid 3px red;
   border-left-style: outset;
   padding: 8px;
-  width: 200p
+  width: fit-content;
 }
 .minus b {
   float: left;
@@ -224,14 +228,22 @@ letter-spacing: 3px;
   color: rgb(56, 56, 56);
   box-shadow: gray 0px 3px 0px 1px;
   margin-top: 5px;
-  width: 400px;
+  width: fit-content;
+  padding-right: 45px;
   
 
 }
-.list-div h3{
+.list-h3{
 
-text-decoration: underline;
-text-align: center;
+ text-decoration: underline;
+ text-align: center;
+ box-shadow: gray 0px 3px 0px 1px;
+ border: none;
+ border-radius: 10px;
+ width: max-content;
+ padding: 20px;
+ margin-left: auto;
+ margin-right: auto;
 }
 
 .list {
@@ -247,7 +259,7 @@ text-align: center;
   box-shadow: gray 0px 0px 2px 2px;
   font-size: 20px;
   color: green;
-  width: 318px;
+  width: 250px;
   
 }
 
@@ -259,7 +271,7 @@ text-align: center;
   box-shadow: gray 0px 0px 2px 2px;
   font-size: 20px;
   color: red;
-  width: 318px;
+  width: 250px;
   text-transform: capitalize;
   
 }
