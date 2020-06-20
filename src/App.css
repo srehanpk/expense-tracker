@@ -230,7 +230,7 @@ letter-spacing: 3px;
   color: rgb(56, 56, 56);
   box-shadow: gray 0px 3px 0px 1px;
   margin-top: 5px;
-  width: fit-content;
+  width: max-content;
   padding-right: 45px;
   
 
@@ -261,8 +261,9 @@ letter-spacing: 3px;
   box-shadow: gray 0px 0px 2px 2px;
   font-size: 20px;
   color: green;
-  width: 250px;
-  
+  min-width: 250px;
+  max-width: max-content;
+  text-transform: capitalize;
 }
 
 .li-minus {
@@ -273,7 +274,8 @@ letter-spacing: 3px;
   box-shadow: gray 0px 0px 2px 2px;
   font-size: 20px;
   color: red;
-  width: 250px;
+  min-width: 250px;
+  max-width: max-content;
   text-transform: capitalize;
   
 }
